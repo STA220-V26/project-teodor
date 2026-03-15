@@ -10,7 +10,7 @@ source("R/functions.R")
 
 list(
   tar_target(
-    name = data_file,
+    name = zipdata,
     command = {
       if (!fs::file_exists("data.zip")) {
         curl::curl_download(
@@ -19,18 +19,20 @@ list(
           quiet = FALSE
         )
       }
-      "data.zip"  # Returnera sökvägen
+      "data.zip"
     },
-    format = "file"  # Targets spårar filen istället
-  )
+    format = "file"
+  ),
 
-
-    tar_target(
-  name = unzipped_files,
-  command = {
-    unzip(data_file, exdir = "data/")
-    list.files("data/", full.names = TRUE)  # Returnera sökvägarna
-  },
-   format = "file"
+  tar_target(
+    name = csv_files,
+    command = {
+      unzip(zipdata, exdir = "data-fixed/")
+      list.files("data-fixed/", pattern = "\\.csv$", full.names = TRUE)
+    },
+    format = "file"
+  ),
+  tar_target(
+    
   )
 )
