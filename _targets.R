@@ -2,7 +2,12 @@ library(targets)
 library(tarchetypes)
 
 tar_option_set(
-  packages = c("tidyverse", "data.table", "pointblank", "janitor"),
+  packages = c(
+    "tidyverse", 
+    "data.table", 
+    "pointblank", 
+    "janitor"
+  ),
   format = "qs"
 )
 
@@ -23,9 +28,8 @@ list(
     },
     format = "file"
   ),
-
   tar_target(
-    name = csv_files,
+    name = files,
     command = {
       unzip(zipdata, exdir = "data-fixed/")
       list.files("data-fixed/", pattern = "\\.csv$", full.names = TRUE)
@@ -33,6 +37,15 @@ list(
     format = "file"
   ),
   tar_target(
-    
+    name=patients_raw,
+    command = read_csv(files[basename(files) == "patients.csv"])
+  ),
+  tar_target(
+    name = observations_raw,
+    command = read_csv(files[basename(files) == "observations.csv"])
+  ),
+  tar_target(
+    name = encounters_raw,
+    command = read_csv(files[basename(files) == "encounters.csv"])
   )
 )
