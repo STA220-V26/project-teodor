@@ -51,5 +51,16 @@ list(
   tar_target(
     name = encounters_raw,
     command = read_csv(files[basename(files) == "encounters.csv"])
+  ),
+  tar_target(
+    observations_wide, 
+    pivot_selected_measures(observations_raw)
+  ),
+  tar_target(
+    observations, fill_bmi(observations_wide)
+  ),
+  tar_target(
+    encounters_insurance_added,
+    add_insurance_coverage(encounters_raw)
   )
 )
