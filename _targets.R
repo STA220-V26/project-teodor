@@ -1,12 +1,16 @@
 library(targets)
 library(tarchetypes)
 
+# All these packages are expected to already be installed in the computer running this,
+# qs is weird and needs to be downloaded from git using the remote package.
 tar_option_set(
   packages = c(
-    "tidyverse", 
-    "data.table", 
-    "pointblank", 
-    "janitor"
+    "tidyverse",
+    "data.table",
+    "pointblank",
+    "janitor",
+    "fs",
+    "curl"
   ),
   format = "qs"
 )
@@ -31,8 +35,8 @@ list(
   tar_target(
     name = files,
     command = {
-      unzip(zipdata, exdir = "data-fixed/")
-      list.files("data-fixed/", pattern = "\\.csv$", full.names = TRUE)
+      unzip(zipdata, exdir = "data-fixed", overwrite = TRUE)
+      list.files("data-fixed/data-fixed", pattern = "\\.csv$", full.names = TRUE)
     },
     format = "file"
   ),
