@@ -1,0 +1,21 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+zipdata|stem|6da312022b65668f|d55add075d8eb010|2c530c1562a7fbd1|-63167595|data.zip|t20527.0108715337s|s292920697b|292920697|file|local|vector|||1.63|package 'tidyverse' was built under R version 4.4.3. package 'ggplot2' was built under R version 4.4.3. package 'tibble' was built under R version 4.4.3. package 'tidyr' was built under R version 4.4.3. package 'readr' was built under R version 4.4.3. package 'purrr' was built under R version 4.4.3. package 'dplyr' was built under R version 4.4.3. package 'stringr' was built under R version 4.4.3. package 'forcats' was built under R version 4.4.3. package 'lubridate' was built under R version 4.4.3. package 'data.table' was built under R version 4.4.3. package 'pointblank' was built under R version 4.4.3. package 'janitor' was built under R version 4.4.3. package 'fs' was built under R version 4.4.3. package 'curl' was built under R version 4.4.3|
+files|stem|5c74023e21b5a3c4|9abe41f885fad010|baeb2f1360659ba2|-229912786|data-fixed/data-fixed/allergies.csv*data-fixed/data-fixed/careplans.csv*data-fixed/data-fixed/claims.csv*data-fixed/data-fixed/conditions.csv*data-fixed/data-fixed/devices.csv*data-fixed/data-fixed/encounters.csv*data-fixed/data-fixed/imaging_studies.csv*data-fixed/data-fixed/immunizations.csv*data-fixed/data-fixed/medications.csv*data-fixed/data-fixed/observations.csv*data-fixed/data-fixed/organizations.csv*data-fixed/data-fixed/patients.csv*data-fixed/data-fixed/payer_transitions.csv*data-fixed/data-fixed/payers.csv*data-fixed/data-fixed/procedures.csv*data-fixed/data-fixed/providers.csv*data-fixed/data-fixed/supplies.csv|t20528.9279444383s|s2728705220b|2728705220|file|local|vector|||51.64||
+observations_raw|stem|bff117f59f329728|933432e54ee8a6d8|8f3206834bf40c0c|1846591967||t20528.9288740928s|s65323748b|65323748|qs|local|vector|||55.2||
+encounters_raw|stem|80880d977d51e0cb|6956e7647433b5e9|8f3206834bf40c0c|14508181||t20528.9289369313s|s33646099b|33646099|qs|local|vector|||3.79||
+patients_raw|stem|3883c7875030f38c|3d15b48407357bd9|8f3206834bf40c0c|1336686124||t20528.928947764s|s615460b|615460|qs|local|vector|||0.16||
+wide_data|stem|6b8225cdf098c0fb|ae74ce6a48e1d671|7d11a2aef2ba2bf6|-1805162368||t20528.9292758324s|s3220091b|3220091|qs|local|vector|||20.22||
+observations_wide|stem|eb335dfd65a50f04|ae74ce6a48e1d671|0bdaa2ad674c08a6|2009608376||t20528.9327481208s|s3971901b|3971901|qs|local|vector|||20.28||
+observations|stem|f59aa34237ff2dc0|f2c1cd72a83628a2|7f6c4ee1cf3cc9ab|125870209||t20528.941199194s|s4142212b|4142212|qs|local|vector|||0.44||
+encounters_insurance_added|stem|60cfb845a3221a53|edfe699b9dc8de5e|70deb52f642451be|-1381687226||t20528.953723208s|s36144734b|36144734|qs|local|vector|||0.02||
+bmi_insurance|stem|4724e89852cc9f99|4ae82cf6840f3c36|80ab5e42fe160aa9|-965399208||t20530.6216144188s|s3187112b|3187112|qs|local|vector|||0.5||
+Analysis_data|stem|a03a8c5251ba69e6|095a9643c1e5c2b0|41653ee03a2bc796|-1180999250||t20530.6255337055s|s3903869b|3903869|qs|local|vector|||0.11||
+Analysis_data_final|stem|0866c9d19123a952|8092611614736f24|5c27422421c7f93c|86481330||t20530.6369635667s|s4530313b|4530313|qs|local|vector|||0.06||
+pivot_selected_measures|function|6abacd1df9f260ef
+merge_bmi_insurance|function|ee997c85d8ff0df7
+fit_betareg|function|d407edcf4d1e2b96
+add_insurance_coverage|function|4025c2a590daef51
+transform_insurance|function|98ca1d5f1d57b805
+fill_bmi|function|ca48001fd3502584
+add_income|function|0b17c27dcf162c0e
+beta_model|stem|3e4fd8aa02df09a6|087eaeaf61f25ee4|f2027e08372f94bb|-1580048015||t20530.6382004403s|s19294133b|19294133|qs|local|vector|||45.67||
