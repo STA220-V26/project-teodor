@@ -62,5 +62,21 @@ list(
   tar_target(
     encounters_insurance_added,
     add_insurance_coverage(encounters_raw)
+  ),
+  tar_target(
+  bmi_insurance,
+  merge_bmi_insurance(encounters_insurance_added, observations)
+  ),
+  tar_target(
+    Analysis_data,
+    add_income(bmi_insurance, patients_raw)
+  ),
+  tar_target(
+    Analysis_data_final,
+    transform_insurance(Analysis_data)
+  ),
+  tar_target(
+    beta_model,
+    fit_betareg(Analysis_data_final)
   )
 )

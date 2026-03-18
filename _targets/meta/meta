@@ -8,6 +8,14 @@ wide_data|stem|6b8225cdf098c0fb|ae74ce6a48e1d671|7d11a2aef2ba2bf6|-1805162368||t
 observations_wide|stem|eb335dfd65a50f04|ae74ce6a48e1d671|0bdaa2ad674c08a6|2009608376||t20528.9327481208s|s3971901b|3971901|qs|local|vector|||20.28||
 observations|stem|f59aa34237ff2dc0|f2c1cd72a83628a2|7f6c4ee1cf3cc9ab|125870209||t20528.941199194s|s4142212b|4142212|qs|local|vector|||0.44||
 encounters_insurance_added|stem|60cfb845a3221a53|edfe699b9dc8de5e|70deb52f642451be|-1381687226||t20528.953723208s|s36144734b|36144734|qs|local|vector|||0.02||
+bmi_insurance|stem|4724e89852cc9f99|4ae82cf6840f3c36|80ab5e42fe160aa9|-965399208||t20530.6216144188s|s3187112b|3187112|qs|local|vector|||0.5||
+Analysis_data|stem|a03a8c5251ba69e6|095a9643c1e5c2b0|41653ee03a2bc796|-1180999250||t20530.6255337055s|s3903869b|3903869|qs|local|vector|||0.11||
+Analysis_data_final|stem|0866c9d19123a952|8092611614736f24|5c27422421c7f93c|86481330||t20530.6369635667s|s4530313b|4530313|qs|local|vector|||0.06||
 pivot_selected_measures|function|6abacd1df9f260ef
+merge_bmi_insurance|function|ee997c85d8ff0df7
+fit_betareg|function|d407edcf4d1e2b96
 add_insurance_coverage|function|4025c2a590daef51
+transform_insurance|function|98ca1d5f1d57b805
 fill_bmi|function|ca48001fd3502584
+add_income|function|0b17c27dcf162c0e
+beta_model|stem|3e4fd8aa02df09a6|087eaeaf61f25ee4|f2027e08372f94bb|-1580048015||t20530.6382004403s|s19294133b|19294133|qs|local|vector|||45.67||
