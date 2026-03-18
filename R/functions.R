@@ -41,9 +41,6 @@ add_insurance_coverage <- function(data) {
     )
 }
 
-install.packages("betareg")
-library(betareg)
-
 # data frame
 # y= proportion
 # x=explaning variables (lägg in ny variabel)
@@ -79,8 +76,6 @@ summary(model)
 #Valfritt att predicta
 predict(model, type = "response")
 
-install.packages("betareg")
-library(betareg)
 
 
 

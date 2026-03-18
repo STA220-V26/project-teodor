@@ -1,8 +1,7 @@
 library(targets)
 library(tarchetypes)
 
-# All these packages are expected to already be installed in the computer running this,
-# qs is weird and needs to be downloaded from git using the remote package.
+# All these packages are expected to already be installed in the computer running this
 tar_option_set(
   packages = c(
     "tidyverse",
@@ -10,7 +9,8 @@ tar_option_set(
     "pointblank",
     "janitor",
     "fs",
-    "curl"
+    "curl",
+    "betareg"
   ),
   format = "qs"
 )
