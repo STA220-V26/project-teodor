@@ -7,7 +7,7 @@ patients_raw|stem|3883c7875030f38c|3d15b48407357bd9|8f3206834bf40c0c|1336686124|
 wide_data|stem|6b8225cdf098c0fb|ae74ce6a48e1d671|7d11a2aef2ba2bf6|-1805162368||t20528.9292758324s|s3220091b|3220091|qs|local|vector|||20.22||
 observations_wide|stem|eb335dfd65a50f04|ae74ce6a48e1d671|0bdaa2ad674c08a6|2009608376||t20528.9327481208s|s3971901b|3971901|qs|local|vector|||20.28||
 observations|stem|f59aa34237ff2dc0|f2c1cd72a83628a2|7f6c4ee1cf3cc9ab|125870209||t20528.941199194s|s4142212b|4142212|qs|local|vector|||0.44||
+encounters_insurance_added|stem|60cfb845a3221a53|edfe699b9dc8de5e|70deb52f642451be|-1381687226||t20528.953723208s|s36144734b|36144734|qs|local|vector|||0.02||
 pivot_selected_measures|function|6abacd1df9f260ef
 add_insurance_coverage|function|4025c2a590daef51
 fill_bmi|function|ca48001fd3502584
-encounters_insurance_added|stem|60cfb845a3221a53|edfe699b9dc8de5e|70deb52f642451be|-1381687226||t20528.953723208s|s36144734b|36144734|qs|local|vector|||0.02||
