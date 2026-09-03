@@ -37,7 +37,7 @@ fill_bmi <- function(data) {
 add_insurance_coverage <- function(data) {
   data |>
     mutate(
-      insurance_percentage_coverage = (total_claim_cost - payer_coverage) / total_claim_cost
+      insurance_percentage_coverage = (payer_coverage) / total_claim_cost
     )
 }
 
