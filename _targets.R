@@ -53,6 +53,10 @@ list(
     command = read_csv(files[basename(files) == "encounters.csv"])
   ),
   tar_target(
+  name = payers_raw,
+  command = read_csv(files[basename(files) == "payers.csv"])
+),
+  tar_target(
     observations_wide, 
     pivot_selected_measures(observations_raw)
   ),
@@ -64,8 +68,12 @@ list(
     add_insurance_coverage(encounters_raw)
   ),
   tar_target(
+    encounters_commercial,
+    filter_commercial_payers(encounters_insurance_added, payers_raw)
+  ),
+  tar_target(
   bmi_insurance,
-  merge_bmi_insurance(encounters_insurance_added, observations)
+  merge_bmi_insurance(encounters_commercial, observations)
   ),
   tar_target(
     Analysis_data,

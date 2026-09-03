@@ -41,6 +41,16 @@ add_insurance_coverage <- function(data) {
     )
 }
 
+filter_commercial_payers <- function(encounters_insurance_added, payers_raw) {
+
+  commercial <- payers_raw |>
+    distinct(id, name, ownership) |>
+    filter(ownership == "PRIVATE")
+
+  encounters_insurance_added |>
+    semi_join(commercial, by = c("payer" = "id"))
+}
+
 merge_bmi_insurance <- function(encounters_insurance_added, observations) {
   
   encounters_insurance_added %>%
@@ -70,6 +80,7 @@ transform_insurance <- function(Analysis_data) {
       )
     )
 }
+
 fit_betareg <- function(Analysis_data_final) {
   betareg(insurance_transformed ~ bmi + income, data = Analysis_data_final)
 }
